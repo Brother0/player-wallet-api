@@ -1,0 +1,36 @@
+{
+    "type": "object",
+    "additionalProperties": false,
+    "properties": {
+        "playerId": {
+            "type": "string"
+        },
+        "firstName": {
+            "type": "string"
+        },
+        "lastName": {
+            "type": "string"
+        },
+        "transactionId": {
+            "type": "string"
+        },
+        "transactionType": {
+            "type": "string",
+            "enum": [
+                "Bet",
+                "Withdraw"
+            ]
+        },
+        "currencyCode": {
+            "type": "string",
+            "enum": [
+                "EUR",
+                "GBP",
+                "CHF"
+            ]
+        },
+        "sessionId": {
+            "type": "string"
+        }
+    }
+}

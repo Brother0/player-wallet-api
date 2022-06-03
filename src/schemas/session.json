@@ -1,0 +1,19 @@
+{
+    "type": "object",
+    "description": "Schema for SESSIONS.sql query",
+    "additionalProperties": false,
+    "properties": {
+        "playerId": {
+            "type": "string"
+        },
+        "sessionId": {
+            "type": "string"
+        },
+        "firstName": {
+            "type": "string"
+        },
+        "lastName": {
+            "type": "string"
+        }
+    }
+}

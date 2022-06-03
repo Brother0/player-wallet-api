@@ -1,0 +1,34 @@
+{
+    "type": "object",
+    "description": "Schema for CREATE_PLAYER_WALLET transactions",
+    "additionalProperties": false,
+    "required": [
+        "walletId",
+        "openingBalance",
+        "currencyCode"
+    ],
+    "properties": {
+        "walletId": {
+            "type": "string",
+            "description": "Wallet business number"
+        },
+        "openingBalance": {
+            "type": "number",
+            "description": "Opening balance at the moment of wallet creation",
+            "exclusiveMinimum": 0
+        },
+        "currencyCode": {
+            "type": "string",
+            "description": "Wallet currency",
+            "enum": [
+                "EUR",
+                "GBP",
+                "CHF"
+            ]
+        },
+        "playerId": {
+            "type": "string",
+            "description": "Player business number"
+        }
+    }
+}

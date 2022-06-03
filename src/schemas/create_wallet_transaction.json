@@ -1,0 +1,43 @@
+{
+    "type": "object",
+    "description": "Schema for CREATE_WALLET_TRANSACTION transactions",
+    "additionalProperties": false,
+    "required": [
+        "transactionId",
+        "amount",
+        "transactionType",
+        "walletId",
+        "sessionId"
+    ],
+    "properties": {
+        "walletId": {
+            "type": "string",
+            "description": "Wallet business number"
+        },
+        "transactionId": {
+            "type": "string",
+            "description": "Transaction business number"
+        },
+        "playerId": {
+            "type": "string",
+            "description": "Player business number"
+        },
+        "sessionId": {
+            "type": "string",
+            "description": "Session business number"
+        },
+        "amount": {
+            "type": "number",
+            "description": "Transaction amount",
+            "exclusiveMinimum": 0
+        },
+        "transactionType": {
+            "type": "string",
+            "description": "Type of transaction",
+            "enum": [
+                "Bet",
+                "Withdraw"
+            ]
+        }
+    }
+}

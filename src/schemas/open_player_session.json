@@ -1,0 +1,18 @@
+{
+    "type": "object",
+    "description": "Schema for OPEN_PLAYER_SESSION transactions",
+    "additionalProperties": false,
+    "required": [
+        "sessionId"
+    ],
+    "properties": {
+        "sessionId": {
+            "type": "string",
+            "description": "Session business number"
+        },
+        "playerId": {
+            "type": "string",
+            "description": "Player business number"
+        }
+    }
+}

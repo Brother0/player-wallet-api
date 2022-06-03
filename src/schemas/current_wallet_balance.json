@@ -1,0 +1,26 @@
+{
+    "type": "object",
+    "additionalProperties": false,
+    "properties": {
+        "playerId": {
+            "type": "string"
+        },
+        "walletId": {
+            "type": "string"
+        },
+        "currencyCode": {
+            "type": "string",
+            "enum": [
+                "EUR",
+                "GBP",
+                "CHF"
+            ]
+        },
+        "firstName": {
+            "type": "string"
+        },
+        "lastName": {
+            "type": "string"
+        }
+    }
+}
