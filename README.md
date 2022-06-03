@@ -1,7 +1,8 @@
 # Player wallet API
 
-This API enables players (players are already imported in to the system) to create new wallets and open sessions. If a player
-has a wallet and a open sesion he can post a new transaction that simulates a betting or withdrawal event.
+This API enables players to create new wallets and open sessions. If a player has a wallet and a open sesion he can post a new transaction that simulates a betting or withdrawal event.
+
+![swagger docs](./swagger.jpg)
 
 ## Prerequisites
 
@@ -12,24 +13,25 @@ Tested with:
 
 ## Setup
 
-1. Rename .env.example to .env and select the desired environment by changing NODE_ENV to test, development or production. This
-is important becaue the initialization scripts that need run be in the next steps depend on the selected environment. The test env
-has some dummy data and is easier to manually test the api wih. The production and development scripts only have players.
+1. Rename .env.example to .env and select the desired environment by changing NODE_ENV to test, development or production. This is important because the initialization scripts that need run be in the next steps depend on the selected environment. The test env has some dummy data and is easier to manually test the api wih. The production and development scripts only have players.
 2. Run docker-compose up -d
 3. npm install
-4. npm run init-db      <- creates tables and populates the database with seed data
+4. npm run init-db
 5. npm run build
 6. npm start
 7. Go to the address defined in the .env file. Default address is: localhost:4000
 
+## Troubleshooting
+
+I developed this on linux. On microsoft windows you need to manually copy .sql files from src folder to appropraiate location in dist folder after build.
+
 ## Authorization
 
-The application has two types of users. A single admin user that can see information from all players and standard users (players) that
-can only see their data. The authorization is done via basic authorization and the passwords are stored in src/password.json
+The application has two types of users. A single admin user that can see information from all players and standard users (players) that can only see their data. The authorization is done via basic authorization and the passwords are stored in src/password.json
 
 ## API documentation
 
-Api documentation is available on (using default .env values) localhost:4000/api/v1/docs
+Api documentation is available on ./api/v1/docs
 
 ## API versioning
 
